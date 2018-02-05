@@ -1,0 +1,106 @@
+body {
+  background-color: #fdeedf;
+  text-align: center;
+  font-family: Helvetica, Arial;
+}
+
+#Shake {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+#head {
+  font-size: 24px;
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+  align-items: center;
+  justify-content: flex-end;
+}
+#nav {
+  display: flex;
+  margin: 0px 20px;
+}
+#nav:hover {
+  cursor: pointer;
+  color: darkred;
+}
+#list {
+  font-family: monospace;
+}
+#list:hover {
+  cursor: pointer;
+  color: darkred;
+}
+
+.poem-map-container {
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.poem-card {
+  width: 250px;
+  height: 300px;
+  border: 1px solid black;
+  border-radius: 5px;
+  -webkit-box-shadow: 4px 4px 5px 0px rgba(133, 121, 133, 1);
+  -moz-box-shadow: 4px 4px 5px 0px rgba(133, 121, 133, 1);
+  box-shadow: 4px 4px 5px 0px rgba(133, 121, 133, 1);
+  margin: 10px;
+  padding: 10px;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  overflow: scroll;
+}
+.poem-card:hover {
+  cursor: pointer;
+}
+
+.poem-card p {
+  margin: 0;
+}
+.row {
+  flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.mainDiv {
+  padding-top: 40px;
+  height: 400px;
+  width: auto;
+  background-color: #fdeedf;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  /* justify-content: space-around;
+  padding: 30px; */
+}
+.titleBox {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  width: 70%;
+  margin: 20px;
+}
+.postBox {
+  margin: 20px;
+  background-color: white;
+  height: 100px;
+  width: 500px;
+}
+.authorBox {
+  margin: 20px;
+  background-color: white;
+  width: 70%;
+  height: 5%;
+}
+h1 {
+  font-size: 30px;
+  font-family: Helvetica, sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
