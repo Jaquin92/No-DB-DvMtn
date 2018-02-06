@@ -15,6 +15,7 @@ export default class Thing extends Component {
     };
     this.nextPoem = this.nextPoem.bind(this);
     this.pastPoem = this.pastPoem.bind(this);
+    this.favorite = this.favorite.bind(this);
   }
 
   componentDidMount() {
@@ -34,6 +35,20 @@ export default class Thing extends Component {
 
     console.log(this.state.poemData);
   }
+
+  favorite(item) {
+    // let fave = {
+    //   title: this.state.title,
+    //   author: this.state.author,
+    //   lines: this.state.lines
+    // };
+
+    axios
+      .post("/api/post", item)
+      .then(result => console.log(result.data))
+      .catch(() => console.log("fail"));
+  }
+
   pastPoem() {
     let num = this.state.current;
     if (num <= 1) {
@@ -68,11 +83,7 @@ export default class Thing extends Component {
           <h1>{item.title}</h1>
           <h3>{item.author}</h3>
           <p>{item.lines}</p>
-          <Favorite
-            title={item.title}
-            author={item.author}
-            lines={item.lines}
-          />
+          <Favorite favorite={this.favorite} item={item} />
         </div>
       );
     });
